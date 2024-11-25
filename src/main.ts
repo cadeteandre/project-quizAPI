@@ -1,3 +1,4 @@
+import { counterRight } from "./functions/checkAnswer";
 import { displayQuestion, showQuizDiv } from "./functions/display";
 import { fetchQuestions } from "./functions/fetch";
 import { IQuestion } from "./interfaces/IQuestion";
@@ -16,14 +17,14 @@ const menuDiv = document.querySelector('#menuDiv') as HTMLDivElement;
 startBtn.addEventListener('click', () => {
     menuDiv.innerHTML = '';
 
-    if(easyInputRadio.checked) {
-        if(languageSelect.value === 'de') {
+    if( easyInputRadio.checked ) {
+        if( languageSelect.value === 'de' ) {
             questionEinfach.forEach((question) => displayQuestion(question));
         } else {
             questionEasy.forEach((question) => displayQuestion(question));
         }
     } else {
-        if(languageSelect.value === 'de') {
+        if( languageSelect.value === 'de' ) {
             questionSchwer.forEach((question) => displayQuestion(question));
         } else {
             questionHard.forEach((question) => displayQuestion(question));
