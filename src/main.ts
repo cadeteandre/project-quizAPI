@@ -6,4 +6,7 @@ const questionEasy: IQuestion[] = await fetchQuestions("https://vz-wd-24-01.gith
 const questionSchwer: IQuestion[] = await fetchQuestions("https://vz-wd-24-01.github.io/typescript-quiz/questions/schwer.json");
 const questionHard: IQuestion[] = await fetchQuestions("https://vz-wd-24-01.github.io/typescript-quiz/questions/hard.json");
 
-console.log("test");
+//* ------------------ Selecting HTML elements ------------------
+const difficultyButtons = document.querySelectorAll('.btn') as NodeListOf<HTMLButtonElement>;
+const languageSelect = document.querySelector('#language') as HTMLSelectElement;
+
