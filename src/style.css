@@ -1,9 +1,23 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Inter-reg';
+  src: url('./assets/fonts/Inter_18pt-Regular.ttf');
+}
+
+body {
+  font-family: 'Inter-reg', sans-serif;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #fff;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 #app {
@@ -11,4 +25,79 @@ body {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+#easy-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+#easy-btn:hover {
+  background-color: #218838;
+}
+
+#hard-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+#hard-btn:hover {
+  background-color: #c82333;
+}
+
+.start-btn {
+  margin-top: 20px;
+  background-color: #007bff;
+  color: white;
+}
+
+.start-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Select */
+.language-select {
+  margin: 20px 0;
+}
+
+.language-select label {
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+select {
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
