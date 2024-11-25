@@ -10,19 +10,25 @@
   </head>
   <body>
     <div id="app">
-      <h1>Welcome to the TypeScript Quiz</h1>
-      <div class="difficulty-buttons">
-        <button id="easy-btn" class="btn">Easy</button>
-        <button id="hard-btn" class="btn">Hard</button>
+      <div id="menuDiv">
+        <h1>Welcome to the TypeScript Quiz</h1>
+        <div class="difficulty-buttons">
+          <label id="easy-btn" class="btn">
+            <input type="radio" value="easy" name="difficulty" checked> Easy
+          </label>
+          <label id="hard-btn" class="btn">
+            <input type="radio" value="hard" name="difficulty"> Hard
+          </label>
+        </div>
+        <div class="language-select">
+          <label for="language">Select Language:</label>
+          <select id="language">
+            <option value="de">Deutsch</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+        <button id="start-btn" class="btn start-btn">Start Quiz</button>
       </div>
-      <div class="language-select">
-        <label for="language">Select Language:</label>
-        <select id="language">
-          <option value="de">Deutsch</option>
-          <option value="en">English</option>
-        </select>
-      </div>
-      <button id="start-btn" class="btn start-btn">Start Quiz</button>
       <section id="showQuiz"></section>
     </div>
   </body>
