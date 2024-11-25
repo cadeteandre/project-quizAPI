@@ -1,3 +1,4 @@
+import { displayQuestion } from "./functions/display";
 import { fetchQuestions } from "./functions/fetch";
 import { IQuestion } from "./interfaces/IQuestion";
 
@@ -9,4 +10,3 @@ const questionHard: IQuestion[] = await fetchQuestions("https://vz-wd-24-01.gith
 //* ------------------ Selecting HTML elements ------------------
 const difficultyButtons = document.querySelectorAll('.btn') as NodeListOf<HTMLButtonElement>;
 const languageSelect = document.querySelector('#language') as HTMLSelectElement;
-
