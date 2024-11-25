@@ -4,17 +4,26 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css">
+    <script type="module" src="/src/main.ts" defer></script>
     <title>Quiz</title>
   </head>
   <body>
     <div id="app">
-      <button>Easy</button>
-      <button>Hard</button>
-      <select id="languaeg">
-        <option value="de">Deutsch</option>
-        <option value="en">English</option>
-      </select>
+      <h1>Welcome to the TypeScript Quiz</h1>
+      <div class="difficulty-buttons">
+        <button id="easy-btn" class="btn">Easy</button>
+        <button id="hard-btn" class="btn">Hard</button>
+      </div>
+      <div class="language-select">
+        <label for="language">Select Language:</label>
+        <select id="language">
+          <option value="de">Deutsch</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+      <button id="start-btn" class="btn start-btn">Start Quiz</button>
+      <section id="showQuiz"></section>
     </div>
-    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
