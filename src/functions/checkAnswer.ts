@@ -7,6 +7,21 @@ export function checkAnswer(i: number, question: IQuestion, event: Event): void 
     const paragraph = event.target as HTMLElement;
     const counter1 = document.querySelector("#counterRight");
     const counter2 = document.querySelector("#counterFalse");
+    const siblings: HTMLElement[] = [];
+    const parent = paragraph.parentNode;
+    const isUsed: boolean = paragraph.classList.contains('used');
+
+    if(isUsed) return;
+
+    if(parent) {
+        const children = parent.children;
+        for(let i: number = 0; i < children.length; i++) {
+            if(children[i].tagName !== 'H3') {
+                children[i].classList.add('used');
+                siblings.push(children[i] as HTMLElement);
+            }
+        }
+    }
 
     if (i === question.correct) {
         counterRight++;
@@ -21,4 +36,5 @@ export function checkAnswer(i: number, question: IQuestion, event: Event): void 
             counter2.innerHTML = `falsche Antworten: ${counterFalse}`;
         }
     }
+
 }
