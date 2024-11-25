@@ -1,6 +1,7 @@
 import { IQuestion } from "../interfaces/IQuestion";
+import { checkAnswer } from "./checkAnswer";
 
-const showQuizDiv = document.querySelector('#showQuiz') as HTMLDivElement;
+export const showQuizDiv = document.querySelector('#showQuiz') as HTMLDivElement;
 
 export function displayQuestion(question: IQuestion) {
     const questionContainer = document.createElement('div') as HTMLDivElement;
@@ -12,7 +13,7 @@ export function displayQuestion(question: IQuestion) {
     question.answers.forEach((answer, index) => {
         const answerParagraph = document.createElement('p') as HTMLParagraphElement;
         answerParagraph.textContent = answer;
-        // answerParagraph.addEventListener('click', checkAnswer(index, question));
+        answerParagraph.addEventListener('click', (event: Event) => checkAnswer(index, question, event));
         questionContainer.appendChild(answerParagraph);
     })
     showQuizDiv.appendChild(questionContainer);
