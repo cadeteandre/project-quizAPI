@@ -1,5 +1,5 @@
 import { questionEasy, questionEinfach, questionHard, questionSchwer } from "../main";
-import { displayQuestion, showQuizDiv } from "./displayQuestion";
+import { displayQuestion, showQuizDiv } from "./display";
 import { displaySideMenu } from "./displaySideMenu";
 
 const easyInputRadio = document.querySelector("#easy-btn") as HTMLInputElement;
