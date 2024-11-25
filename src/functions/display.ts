@@ -5,6 +5,7 @@ export const showQuizDiv = document.querySelector('#showQuiz') as HTMLDivElement
 
 export function displayQuestion(question: IQuestion) {
     const questionContainer = document.createElement('div') as HTMLDivElement;
+    questionContainer.classList.add('question__container');
     const questionH3 = document.createElement('h3') as HTMLHeadElement;
 
     questionH3.textContent = question.question;
