@@ -1,7 +1,7 @@
 import { IQuestion } from "../interfaces/IQuestion";
 
-export let counterRight: number = 0;
-export let counterFalse: number = 0;
+let counterRight: number = 0;
+let counterFalse: number = 0;
 
 export function checkAnswer(i: number, question: IQuestion, event: Event): void {
     const paragraph = event.target as HTMLElement;
@@ -9,15 +9,15 @@ export function checkAnswer(i: number, question: IQuestion, event: Event): void 
     const counter2 = document.querySelector("#counterFalse");
     const siblings: HTMLElement[] = [];
     const parent = paragraph.parentNode;
-    const isUsed: boolean = paragraph.classList.contains('used');
+    const isUsed: boolean = paragraph.classList.contains("used");
 
-    if(isUsed) return;
+    if (isUsed) return;
 
-    if(parent) {
+    if (parent) {
         const children = parent.children;
-        for(let i: number = 0; i < children.length; i++) {
-            if(children[i].tagName !== 'H3') {
-                children[i].classList.add('used');
+        for (let i: number = 0; i < children.length; i++) {
+            if (children[i].tagName !== "H3") {
+                children[i].classList.add("used");
                 siblings.push(children[i] as HTMLElement);
             }
         }
@@ -36,5 +36,4 @@ export function checkAnswer(i: number, question: IQuestion, event: Event): void 
             counter2.innerHTML = `falsche Antworten: ${counterFalse}`;
         }
     }
-
 }
