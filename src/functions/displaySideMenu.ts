@@ -17,15 +17,19 @@ export function displaySideMenu() {
     pFalse.id = "counterFalse";
     section.appendChild(pFalse);
 
+    const divButton = document.createElement("div");
+    divButton.classList.add("divButton");
+    section.appendChild(divButton);
+
     const resetBtn = document.createElement("button");
     resetBtn.textContent = "Reset";
     resetBtn.addEventListener("click", startGame);
-    section.appendChild(resetBtn);
+    divButton.appendChild(resetBtn);
 
     const backToMenuBtn = document.createElement("button");
     backToMenuBtn.textContent = "Back to Menu";
     backToMenuBtn.addEventListener("click", () => {
         location.reload();
     });
-    section.appendChild(backToMenuBtn);
+    divButton.appendChild(backToMenuBtn);
 }

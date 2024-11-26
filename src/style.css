@@ -27,6 +27,7 @@ body {
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
+    gap: 50px;
 }
 
 h1 {
@@ -156,4 +157,11 @@ select {
     transform: none !important; /* !Important weil die Selektorspezifischkeit von ".used" im Vergleich zu ".question__container p:hover" zu gering ist */
     box-shadow: none !important; /* !Important weil die Selektorspezifischkeit von ".used" im Vergleich zu ".question__container p:hover" zu gering ist */
     cursor: initial !important; /* !Important weil die Selektorspezifischkeit von ".used" im Vergleich zu ".question__container p:hover" zu gering ist */
+}
+
+#sideMenu {
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+    text-align: left;
 }
