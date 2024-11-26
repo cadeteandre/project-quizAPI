@@ -16,6 +16,7 @@ export function startGame() {
 
     app.style.flexDirection = "row";
     showQuizDiv.style.display = "flex";
+    sideMenu.style.display = "block";
 
     setCounterFalse(0);
     setCounterRight(0);
