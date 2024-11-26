@@ -153,7 +153,7 @@ select {
 }
 
 .used {
-    transform: none !important;
-    box-shadow: none !important;
-    cursor: initial !important;
+    transform: none !important; /* !Important weil die Selektorspezifischkeit von ".used" im Vergleich zu ".question__container p:hover" zu gering ist */
+    box-shadow: none !important; /* !Important weil die Selektorspezifischkeit von ".used" im Vergleich zu ".question__container p:hover" zu gering ist */
+    cursor: initial !important; /* !Important weil die Selektorspezifischkeit von ".used" im Vergleich zu ".question__container p:hover" zu gering ist */
 }
