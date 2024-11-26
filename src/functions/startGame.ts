@@ -22,15 +22,15 @@ export function startGame() {
 
     if (easyInputRadio.checked) {
         if (languageSelect.value === "de") {
-            questionEinfach.forEach((question) => displayQuestion(question, questionEinfach.length));
+            questionEinfach.forEach((question) => displayQuestion(question, questionEinfach));
         } else {
-            questionEasy.forEach((question) => displayQuestion(question, questionEasy.length));
+            questionEasy.forEach((question) => displayQuestion(question, questionEasy));
         }
     } else {
         if (languageSelect.value === "de") {
-            questionSchwer.forEach((question) => displayQuestion(question, questionSchwer.length));
+            questionSchwer.forEach((question) => displayQuestion(question, questionSchwer));
         } else {
-            questionHard.forEach((question) => displayQuestion(question, questionHard.length));
+            questionHard.forEach((question) => displayQuestion(question, questionHard));
         }
     }
 

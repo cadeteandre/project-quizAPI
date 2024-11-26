@@ -5,7 +5,7 @@ let counterRight: number = 0;
 let counterFalse: number = 0;
 let counter: number = 0;
 
-export function checkAnswer(i: number, question: IQuestion, event: Event, endQuizCounter: number): void {
+export function checkAnswer(i: number, question: IQuestion, event: Event, allQuestions: IQuestion[]): void {
     const paragraph = event.target as HTMLElement;
     const counter1 = document.querySelector("#counterRight");
     const counter2 = document.querySelector("#counterFalse");
@@ -38,8 +38,8 @@ export function checkAnswer(i: number, question: IQuestion, event: Event, endQui
     }
 
     counter++;
-    if(counter === 1) {
-        endGame(counterRight, endQuizCounter);
+    if(counter === allQuestions.length) {
+        endGame(counterRight, allQuestions);
     }
 }
 
