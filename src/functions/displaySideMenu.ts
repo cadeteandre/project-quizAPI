@@ -23,11 +23,13 @@ export function displaySideMenu() {
 
     const resetBtn = document.createElement("button");
     resetBtn.textContent = "Reset";
+    resetBtn.classList.add("btn");
     resetBtn.addEventListener("click", startGame);
     divButton.appendChild(resetBtn);
 
     const backToMenuBtn = document.createElement("button");
     backToMenuBtn.textContent = "Back to Menu";
+    backToMenuBtn.classList.add("btn");
     backToMenuBtn.addEventListener("click", () => {
         location.reload();
     });
