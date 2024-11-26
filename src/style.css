@@ -8,6 +8,10 @@
     font-family: "Inter-reg";
     src: url("./assets/fonts/Inter_18pt-Regular.ttf");
 }
+@font-face {
+    font-family: "Inter-bold";
+    src: url("./assets/fonts/Inter_18pt-Bold.ttf");
+}
 
 body {
     font-family: "Inter-reg", sans-serif;
@@ -35,6 +39,10 @@ h1 {
     margin-bottom: 20px;
     color: #fff;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+  font-family: 'Inter-bold', sans-serif;
 }
 
 /* Buttons */
@@ -171,6 +179,7 @@ select {
     animation: fadeIn 0.8s ease-in-out;
     color: black;
     padding: 20px;
+    text-align: center;
 }
 
 #sideMenu h3 {
@@ -179,12 +188,16 @@ select {
 
 .divButton {
     margin-top: 1rem;
+    display: flex;
+    align-items: center;
 }
 
 .divButton button {
     background-color: #007bff;
     color: white;
     margin: 0 10px;
+    min-width: 100px;
+    min-height: 56px;
 }
 
 .divButton button:hover {
