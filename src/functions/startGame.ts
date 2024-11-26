@@ -3,7 +3,7 @@ import { setCounterFalse, setCounterRight } from "./checkAnswer";
 import { displayQuestion, showQuizDiv } from "./display";
 import { displaySideMenu } from "./displaySideMenu";
 
-const easyInputRadio = document.querySelector("#easy-btn") as HTMLInputElement;
+const easyInputRadio = document.querySelector("#easyRadioInput") as HTMLInputElement;
 const languageSelect = document.querySelector("#language") as HTMLSelectElement;
 const menuDiv = document.querySelector("#menuDiv") as HTMLDivElement;
 const sideMenu = document.querySelector("#sideMenu") as HTMLDivElement;

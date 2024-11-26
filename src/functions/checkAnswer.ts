@@ -1,4 +1,5 @@
 import { IQuestion } from "../interfaces/IQuestion";
+import { endGame } from "./endGame";
 
 let counterRight: number = 0;
 let counterFalse: number = 0;
@@ -8,7 +9,6 @@ export function checkAnswer(i: number, question: IQuestion, event: Event, endQui
     const paragraph = event.target as HTMLElement;
     const counter1 = document.querySelector("#counterRight");
     const counter2 = document.querySelector("#counterFalse");
-    const siblings: HTMLElement[] = [];
     const parent = paragraph.parentNode;
     const isUsed: boolean = paragraph.classList.contains("used");
 
@@ -19,7 +19,6 @@ export function checkAnswer(i: number, question: IQuestion, event: Event, endQui
         for (let i: number = 0; i < children.length; i++) {
             if (children[i].tagName !== "H3") {
                 children[i].classList.add("used");
-                siblings.push(children[i] as HTMLElement);
             }
         }
     }
@@ -37,10 +36,10 @@ export function checkAnswer(i: number, question: IQuestion, event: Event, endQui
             counter2.innerHTML = `falsche Antworten: ${counterFalse}`;
         }
     }
-  
+
     counter++;
-    if(counter === endQuizCounter) {
-        alert('End Quiz');
+    if(counter === 1) {
+        endGame(counterRight, endQuizCounter);
     }
 }
 
