@@ -14,10 +14,10 @@
         <h1>Welcome to the TypeScript Quiz</h1>
         <div class="difficulty-buttons">
           <label id="easy-btn" class="btn">
-            <input type="radio" value="easy" name="difficulty" checked> Easy
+            <input id="easyRadioInput" type="radio" value="easy" name="difficulty" checked> Easy
           </label>
           <label id="hard-btn" class="btn">
-            <input type="radio" value="hard" name="difficulty"> Hard
+            <input id="hardRadioInput" type="radio" value="hard" name="difficulty"> Hard
           </label>
         </div>
         <div class="language-select">
@@ -31,6 +31,14 @@
       </div>
       <section id="showQuiz"></section>
       <section id="sideMenu"></section>
+      <div id="quizResultModal" class="modal hidden">
+        <div class="modal-content">
+          <h2>Quiz Finished! </h2>
+          <p id="resultMessage">You got right <span id="correctAnswers"></span> from <span id="totalQuestions"></span> questions!</p>
+          <button id="closeModal">Close</button>
+        </div>
+      </div>
+      
     </div>
   </body>
 </html>
