@@ -38,7 +38,7 @@ export function checkAnswer(i: number, question: IQuestion, event: Event, endQui
     }
 
     counter++;
-    if(counter === 1) {
+    if(counter === endQuizCounter) {
         endGame(counterRight, endQuizCounter);
     }
 }
