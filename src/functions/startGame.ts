@@ -1,4 +1,5 @@
-import { questionEasy, questionEinfach, questionHard, questionSchwer } from '../main';
+import { questionEasy, questionEinfach, questionHard, questionSchwer } from "../main";
+import { setCounterFalse, setCounterRight } from "./checkAnswer";
 import { displayQuestion, showQuizDiv } from "./display";
 import { displaySideMenu } from "./displaySideMenu";
 
@@ -15,6 +16,9 @@ export function startGame() {
 
     app.style.flexDirection = "row";
     showQuizDiv.style.display = "flex";
+
+    setCounterFalse(0);
+    setCounterRight(0);
 
     if (easyInputRadio.checked) {
         if (languageSelect.value === "de") {
