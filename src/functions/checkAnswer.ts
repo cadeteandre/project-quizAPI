@@ -2,8 +2,9 @@ import { IQuestion } from "../interfaces/IQuestion";
 
 export let counterRight: number = 0;
 export let counterFalse: number = 0;
+let counter: number = 0;
 
-export function checkAnswer(i: number, question: IQuestion, event: Event): void {
+export function checkAnswer(i: number, question: IQuestion, event: Event, endQuizCounter: number): void {
     const paragraph = event.target as HTMLElement;
     const counter1 = document.querySelector("#counterRight");
     const counter2 = document.querySelector("#counterFalse");
@@ -37,4 +38,8 @@ export function checkAnswer(i: number, question: IQuestion, event: Event): void 
         }
     }
 
+    counter++;
+    if(counter === endQuizCounter) {
+        alert('End Quiz');
+    }
 }
