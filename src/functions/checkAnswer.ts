@@ -37,3 +37,19 @@ export function checkAnswer(i: number, question: IQuestion, event: Event): void 
         }
     }
 }
+
+export function setCounterRight(newValue: number) {
+    counterRight = newValue;
+}
+
+export function getCounterRight() {
+    return counterRight;
+}
+
+export function setCounterFalse(newValue: number) {
+    counterFalse = newValue;
+}
+
+export function getCounterFalse() {
+    return counterFalse;
+}
