@@ -1,4 +1,4 @@
-import { questionEasy, questionEinfach, questionHard, questionSchwer } from "../main";
+import { questionEasy, questionEinfach, questionHard, questionSchwer } from '../main';
 import { displayQuestion, showQuizDiv } from "./display";
 import { displaySideMenu } from "./displaySideMenu";
 
@@ -18,15 +18,15 @@ export function startGame() {
 
     if (easyInputRadio.checked) {
         if (languageSelect.value === "de") {
-            questionEinfach.forEach((question) => displayQuestion(question));
+            questionEinfach.forEach((question) => displayQuestion(question, questionEinfach.length));
         } else {
-            questionEasy.forEach((question) => displayQuestion(question));
+            questionEasy.forEach((question) => displayQuestion(question, questionEasy.length));
         }
     } else {
         if (languageSelect.value === "de") {
-            questionSchwer.forEach((question) => displayQuestion(question));
+            questionSchwer.forEach((question) => displayQuestion(question, questionSchwer.length));
         } else {
-            questionHard.forEach((question) => displayQuestion(question));
+            questionHard.forEach((question) => displayQuestion(question, questionHard.length));
         }
     }
 
