@@ -38,6 +38,7 @@ export function checkAnswer(i: number, question: IQuestion, event: Event, allQue
     }
 
     counter++;
+
     if(counter === allQuestions.length) {
         endGame(counterRight, allQuestions);
     }
